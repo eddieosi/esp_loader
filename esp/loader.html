@@ -1,11 +1,21 @@
-<html class="replace_me">
+<!doctype html>
+<html lang="en">
+
 <head>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
-        $.load("https://raw.githubusercontent.com/eddieosi/esp_loader/main/index.html");
+        $(document).ready(function () {
+            $("head").load("https://raw.githubusercontent.com/eddieosi/esp_loader/main/head.html");
+            $("body").load("https://raw.githubusercontent.com/eddieosi/esp_loader/main/body.html");
+        });
 
+        var jsonData = JSON.parse('[{"input1":"1", "input2":"2", "input3":"3"}, {"input1":"11", "input2":"21", "input3":"31"}, {"input1":"12", "input2":"22", "input3":"32"}]');
+        // var jsonData = JSON.parse("%Jsondata%");
     </script>
-
 </head>
+
+<body>
+</body>
 
 </html>
