@@ -8,15 +8,19 @@
     <script>
         $(document).ready(function () {
             $("head").load("https://raw.githubusercontent.com/eddieosi/esp_loader/main/head.html");
-            $("body").load("https://raw.githubusercontent.com/eddieosi/esp_loader/main/body.html", function(){
-                var json = "var jsonData = JSON.parse('[{\"input1\":\"1\", \"input2\":\"2\", \"input3\":\"3\"}, {\"input1\":\"11\", \"input2\":\"21\", \"input3\":\"31\"}, {\"input1\":\"12\", \"input2\":\"22\", \"input3\":\"32\"}]')";
-                //var json = "var jsonData = JSON.parse('%Jsondata%')";
-                $("head").append("<script>" + json + "<\/script>");
+            //$("head").load("http://localhost:5500/head.html", function () {
+
+                $("body").load("https://raw.githubusercontent.com/eddieosi/esp_loader/main/body.html", function(){
+                //$("body").load("http://localhost:5500/body.html", function () {
+                    var json = "var jsonData = JSON.parse('[{\"firstName\":\"1\", \"lastName\":\"2\", \"message\":\"3\"}, {\"firstName\":\"11\", \"lastName\":\"21\", \"message\":\"31\"}, {\"firstName\":\"12\", \"lastName\":\"22\", \"message\":\"32\"}]')";
+                    //var json = "var jsonData = JSON.parse('%Jsondata%')";
+                    $("head").append("<script>" + json + "<\/script>");
+                });
             });
-            
+
         });
-        
-        
+
+
     </script>
 </head>
 
