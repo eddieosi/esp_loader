@@ -5,7 +5,7 @@ $(document).ready(function () {
             $editor = $('#editor'),
             $editorTitle = $('#editor-title'),
             ft = FooTable.init('#esp-data', {
-                columns: columnData,
+                columns: JSON.parse(columnData),
                 rows: jsonData,
                 editing: {
                     addRow: function () {
